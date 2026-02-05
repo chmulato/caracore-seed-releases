@@ -19,3 +19,4 @@ build/
 node_modules/
 *.secret
 *.key
+gerar_license_seed.py
