@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CaraCore Seed — Gestão de licenças 100% offline | Cara Core Informática</title>
-    <meta name="description" content="CaraCore Seed: aplicativo Windows para gestão de licenças do ecossistema Cara Core. R$ 29,90 — Portal de controle, transparência e LGPD. Download do artefato versionado (caracore-seed.exe).">
+    <title>CaraCore Seed — Gestão de licenças 100% offline | chmulato/caracore-seed-releases</title>
+    <meta name="description" content="CaraCore Seed: aplicativo Windows para gestão de licenças do ecossistema Cara Core. R$ 29,90. Portal de controle, transparência e LGPD. Vitrine inspirada no chmulato/ETE Minerador 4.0.">
+    <base href="https://chmulato.github.io/caracore-seed-releases/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -20,9 +21,7 @@
             --accent-green: #3fb950;
             --border: #373e47;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, sans-serif;
             line-height: 1.6;
@@ -31,93 +30,32 @@
             min-height: 100vh;
             padding: 0 20px 40px;
         }
-
         .wrapper { max-width: 900px; margin: 0 auto; }
-
-        .breadcrumb {
-            font-size: 0.85rem;
-            margin-bottom: 24px;
-            padding-top: 16px;
-        }
+        .breadcrumb { font-size: 0.85rem; margin-bottom: 24px; padding-top: 16px; }
         .breadcrumb a { color: var(--accent-blue); text-decoration: none; }
         .breadcrumb a:hover { text-decoration: underline; }
         .breadcrumb span { color: var(--text-secondary); }
-
         header {
-            padding: 24px 0 40px;
+            padding: 48px 0 40px;
             text-align: center;
             border-bottom: 1px solid var(--border);
         }
-
-        header h1 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: var(--text-primary);
-            margin-bottom: 12px;
-        }
-
-        header .subtitle {
-            font-size: 1rem;
-            font-weight: 400;
-            color: var(--text-secondary);
-            max-width: 640px;
-            margin: 0 auto;
-            line-height: 1.65;
-        }
-
-        header .tagline {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--accent-gold);
-            max-width: 640px;
-            margin: 16px auto 0;
-            line-height: 1.6;
-        }
-
+        header h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 12px; }
+        header .subtitle { font-size: 1rem; font-weight: 400; color: var(--text-secondary); max-width: 640px; margin: 0 auto; line-height: 1.65; }
+        header .tagline { font-size: 0.95rem; font-weight: 500; color: var(--accent-gold); max-width: 640px; margin: 16px auto 0; line-height: 1.6; }
         .methodology { margin: 40px 0 48px; }
-
         .methodology .card {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 28px 32px;
         }
-
-        .methodology .card h2 {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            margin-bottom: 14px;
-        }
-
-        .methodology .card p {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
+        .methodology .card h2 { font-size: 1rem; font-weight: 600; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 14px; }
+        .methodology .card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; }
         .methodology .card p strong { color: var(--text-primary); }
-
         .methodology .card.card-differential { margin-top: 20px; }
-
-        .nav-section-title {
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-        }
-
-        .nav-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-        }
-
+        .nav-section-title { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-secondary); margin-bottom: 20px; }
+        .nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
         .nav-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -130,81 +68,35 @@
             flex-direction: column;
             align-items: flex-start;
         }
-
-        .nav-card:hover {
-            border-color: var(--accent-blue);
-            background: var(--bg-elevated);
-        }
-
-        .nav-card-download {
-            border-left: 4px solid var(--accent-green);
-        }
-        .nav-card-download:hover {
-            border-color: var(--accent-green);
-            background: rgba(63, 185, 80, 0.08);
-        }
+        .nav-card:hover { border-color: var(--accent-blue); background: var(--bg-elevated); }
+        .nav-card-download { border-left: 4px solid var(--accent-green); }
+        .nav-card-download:hover { border-color: var(--accent-green); background: rgba(63, 185, 80, 0.08); }
         .nav-card-download h3 { color: var(--accent-green); }
-
-        .nav-card .icon {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 16px;
-            flex-shrink: 0;
-        }
-
-        .nav-card .icon svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .nav-card h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-        }
-
-        .nav-card p {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            line-height: 1.55;
-        }
-
-        footer {
-            margin-top: 56px;
-            padding-top: 28px;
-            border-top: 1px solid var(--border);
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-
+        .nav-card .icon { width: 40px; height: 40px; margin-bottom: 16px; flex-shrink: 0; }
+        .nav-card .icon svg { width: 100%; height: 100%; }
+        .nav-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+        .nav-card p { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.55; }
+        footer { margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--text-secondary); }
         footer p { margin-bottom: 8px; }
-
         footer a { color: var(--accent-blue); text-decoration: none; }
         footer a:hover { text-decoration: underline; }
-
-        footer .soberania {
-            margin-top: 16px;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            opacity: 0.9;
-        }
+        footer .soberania { margin-top: 16px; font-size: 0.8rem; opacity: 0.9; }
     </style>
 </head>
 <body>
     <div class="wrapper">
         <nav class="breadcrumb" aria-label="Navegação">
-            <a href="https://chmulato.github.io/site/cara-core/portfolio.html#caracore-seed">Cara Core Informática</a>
+            <a href="https://caracore.com.br/portfolio.html#caracore-seed">Cara Core Informática</a>
             <span> · </span>
-            <a href="https://chmulato.github.io/site/cara-core/portfolio.html">Portfólio</a>
+            <a href="https://caracore.com.br/portfolio.html">Portfólio</a>
             <span> · </span>
-            <span>CaraCore Seed Releases</span>
+            <span>CaraCore Seed — Vitrine</span>
         </nav>
 
         <header>
             <h1>CaraCore Seed</h1>
             <p class="subtitle">Gestão de licenças para aplicações no Windows. Produto de utilidade da Cara Core Informática: aplicativo desktop 100% offline com portal de controle, transparência e LGPD.</p>
-            <p class="tagline">Valor único R$ 29,90. Contador de Licenças dos clientes que compram PDV, Minerador 4.0, Reino OIDC e Hub para rodar no Windows. Inspirado na mesma filosofia do chmulatoETE Minerador 4.0.</p>
+            <p class="tagline">Valor único R$ 29,90. Contador de Licenças dos clientes que compram PDV, Minerador 4.0, Reino OIDC e Hub para rodar no Windows. Vitrine inspirada no portal chmulato/ETE Minerador 4.0.</p>
         </header>
 
         <section class="methodology">
@@ -220,7 +112,7 @@
 
         <p class="nav-section-title">Navegação</p>
         <div class="nav-grid">
-            <a href="download.html" class="nav-card nav-card-download" title="Baixar o instalador Windows do CaraCore Seed (artefato versionado)">
+            <a href="download.html" class="nav-card nav-card-download" title="Baixar o instalador Windows do CaraCore Seed">
                 <span class="icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
@@ -259,9 +151,9 @@
         </section>
 
         <footer>
-            <p><a href="https://chmulato.github.io/site/cara-core/portfolio.html#caracore-seed">Cara Core Informática — Portfólio</a> · <a href="https://github.com/chmulato/caracore-seed-releases" target="_blank" rel="noopener">Repositório GitHub: chmulato/caracore-seed-releases</a></p>
+            <p><a href="https://caracore.com.br/portfolio.html#caracore-seed">Cara Core Informática — Portfólio</a> · <a href="https://github.com/chmulato/caracore-seed-releases" target="_blank" rel="noopener">Repositório GitHub: chmulato/caracore-seed-releases</a></p>
             <p>Delivery centralizado pela Cara Core Informática. R$ 29,90 — valor único. Portal de controle de licenças com transparência e LGPD.</p>
-            <p class="soberania">CaraCore Seed — 100% offline, Windows Desktop (Electron + SQLite). Contador de Licenças para o ecossistema Cara Core.</p>
+            <p class="soberania">CaraCore Seed — 100% offline, Windows Desktop (Electron + SQLite). Vitrine inspirada no portal chmulato/ETE Minerador 4.0.</p>
         </footer>
     </div>
 </body>
