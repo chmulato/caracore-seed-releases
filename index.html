@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://chmulato.github.io/caracore-seed-releases/">
-    <title>CaraCore Seed — Contador de licenças para Windows | Cara Core Informática</title>
-    <meta name="description" content="CaraCore Seed: aplicativo Windows para contabilidade de clientes e licenças. R$ 29,00. PIX Cara Core. 100% offline, SQLite e Electron. Produto final somente a pagamento.">
+    <title>CaraCore Seed — Contador de licenças | Cara Core Informática</title>
+    <meta name="description" content="CaraCore Seed: ferramenta interna da Cara Core para gestão de licenças no ecossistema (PDV, Minerador 4.0, Reino OIDC, Hub). A aplicação não está disponível para download ou venda.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,8 +18,6 @@
             --text-secondary: #8b949e;
             --accent-blue: #58a6ff;
             --accent-gold: #d4a853;
-            --accent-amber: #f59e0b;
-            --accent-green: #3fb950;
             --border: #373e47;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -43,7 +41,6 @@
         }
         header h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 12px; }
         header .subtitle { font-size: 1rem; font-weight: 400; color: var(--text-secondary); max-width: 640px; margin: 0 auto; line-height: 1.65; }
-        header .tagline { font-size: 0.95rem; font-weight: 500; color: var(--accent-gold); max-width: 640px; margin: 16px auto 0; line-height: 1.6; }
         .methodology { margin: 40px 0 48px; }
         .methodology .card {
             background: var(--bg-card);
@@ -54,7 +51,7 @@
         .methodology .card h2 { font-size: 1rem; font-weight: 600; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 14px; }
         .methodology .card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; }
         .methodology .card p strong { color: var(--text-primary); }
-        .methodology .card.card-differential { margin-top: 20px; }
+        .methodology .card.card-differential { margin-top: 20px; border-left: 4px solid var(--accent-gold); }
         .nav-section-title { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-secondary); margin-bottom: 20px; }
         .nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
         .nav-card {
@@ -70,12 +67,6 @@
             align-items: flex-start;
         }
         .nav-card:hover { border-color: var(--accent-blue); background: var(--bg-elevated); }
-        .nav-card-download { border-left: 4px solid var(--accent-green); }
-        .nav-card-download:hover { border-color: var(--accent-green); background: rgba(63, 185, 80, 0.08); }
-        .nav-card-download h3 { color: var(--accent-green); }
-        .nav-card-compra { border-left: 4px solid var(--accent-amber); }
-        .nav-card-compra:hover { border-color: var(--accent-amber); background: rgba(245, 158, 11, 0.08); }
-        .nav-card-compra h3 { color: var(--accent-amber); }
         .nav-card .icon { width: 40px; height: 40px; margin-bottom: 16px; flex-shrink: 0; }
         .nav-card .icon svg { width: 100%; height: 100%; }
         .nav-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
@@ -84,7 +75,6 @@
         footer p { margin-bottom: 8px; }
         footer a { color: var(--accent-blue); text-decoration: none; }
         footer a:hover { text-decoration: underline; }
-        footer .soberania { margin-top: 16px; font-size: 0.8rem; opacity: 0.9; }
     </style>
 </head>
 <body>
@@ -94,56 +84,27 @@
             <span> · </span>
             <a href="https://caracore.com.br/portfolio.html">Portfólio</a>
             <span> · </span>
-            <span>CaraCore Seed — Loja</span>
+            <span>CaraCore Seed</span>
         </nav>
 
         <header>
             <h1>CaraCore Seed</h1>
-            <p class="subtitle">Contador de licenças e gestão de clientes para o ecossistema Cara Core. Aplicativo Windows Desktop 100% offline — SQLite e arquitetura robusta em Electron.</p>
-            <p class="tagline">Produto final somente a pagamento. R$ 29,00 (valor único) — PIX para Cara Core Informática (CNPJ). Mesma lógica de balcão de negócios do chmulato/ETE Minerador 4.0.</p>
+            <p class="subtitle">Contador de licenças e gestão de clientes para o ecossistema Cara Core (PDV, Minerador 4.0, Reino OIDC, Hub). Ferramenta de uso interno da Cara Core Informática.</p>
         </header>
 
         <section class="methodology">
             <div class="card">
-                <h2>Por que o CaraCore Seed?</h2>
-                <p>Centraliza a <strong>contabilidade de clientes e licenças</strong> do ecossistema Cara Core (PDV, Minerador 4.0, Reino OIDC, Hub) em um único aplicativo <strong>Windows Desktop (Electron)</strong>, com banco <strong>SQLite</strong> local. Nada na nuvem — tudo no seu PC. O cliente vê e gerencia suas licenças com transparência e em conformidade com a LGPD. Arquitetura robusta para o balcão de negócios.</p>
+                <h2>O que é o CaraCore Seed?</h2>
+                <p>O <strong>CaraCore Seed</strong> é um aplicativo Windows Desktop (Electron + SQLite) que centraliza a contabilidade de clientes e licenças do ecossistema Cara Core. Funciona 100% offline e oferece portal de controle com transparência e LGPD. É uma ferramenta de <strong>utilidade interna</strong> da Cara Core — não é produto comercializado ao público.</p>
             </div>
             <div class="card card-differential">
-                <h2>Produto somente a pagamento</h2>
-                <p>Não há versão FREE. Nesta loja filial divulgamos o <strong>protótipo em HTML</strong> (esta vitrine). O produto entregue é a versão a pagamento: R$ 29,00 (PIX, CNPJ Cara Core Informática). Após a compra, o cliente acessa o instalador <strong>caracore-seed.exe</strong> e utiliza o aplicativo 100% offline.</p>
+                <h2>Aplicação não disponível</h2>
+                <p>A aplicação <strong>não está disponível para download nem à venda</strong>. Esta página existe para informar que o produto existe no portfólio da Cara Core. Para conhecer nossos produtos disponíveis, consulte o <a href="https://caracore.com.br/portfolio.html" style="color: var(--accent-blue);">portfólio</a>.</p>
             </div>
         </section>
 
-        <p class="nav-section-title">Navegação</p>
+        <p class="nav-section-title">Links</p>
         <div class="nav-grid">
-            <a href="compra.html" class="nav-card nav-card-compra" title="Comprar CaraCore Seed — R$ 29,00 PIX">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-                    </svg>
-                </span>
-                <h3>Comprar — R$ 29,00</h3>
-                <p>Pagamento via PIX (CNPJ Cara Core Informática). Valor único. Após confirmação, você recebe o acesso ao instalador e uso do aplicativo.</p>
-            </a>
-            <a href="download.html" class="nav-card nav-card-download" title="Baixar o instalador Windows do CaraCore Seed">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                    </svg>
-                </span>
-                <h3>Download — CaraCore Seed</h3>
-                <p>Release v1.0.0 disponível. Instalador Windows (<strong>caracore-seed.exe</strong>); checksums SHA-256 e MD5 na página de Releases.</p>
-            </a>
-            <a href="ativacao.html" class="nav-card" title="Como ativar a licença">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                    </svg>
-                </span>
-                <h3>Ativar licença</h3>
-                <p>Envie o ID de Ativação (do app) + comprovante PIX para receber o <strong>license.key</strong>. Controle preso ao SO e à placa-mãe. LGPD.</p>
-            </a>
             <a href="canal-feedback.html" class="nav-card" title="Suporte e feedback">
                 <span class="icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -151,16 +112,7 @@
                     </svg>
                 </span>
                 <h3>Canal de feedback</h3>
-                <p>E-mail suporte@caracore.com.br, WhatsApp e Telegram 55 41 9 9909-7797. Não atendemos ligações telefônicas.</p>
-            </a>
-            <a href="https://github.com/chmulato/caracore-seed-releases/releases" class="nav-card" target="_blank" rel="noopener">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                    </svg>
-                </span>
-                <h3>Releases (GitHub)</h3>
-                <p>Lista de versões e artefatos. <strong>caracore-seed.exe</strong> e checksums na release mais recente.</p>
+                <p>E-mail suporte@caracore.com.br, WhatsApp e Telegram. Não atendemos ligações telefônicas.</p>
             </a>
             <a href="https://caracore.com.br/portfolio.html#caracore-seed" class="nav-card">
                 <span class="icon" aria-hidden="true">
@@ -169,22 +121,22 @@
                     </svg>
                 </span>
                 <h3>Portfólio Cara Core</h3>
-                <p>Cara Core Informática — CaraCore Seed no portfólio de produtos e balcão de negócios.</p>
+                <p>CaraCore Seed no portfólio de produtos (apenas referência; aplicação não disponível).</p>
+            </a>
+            <a href="https://github.com/chmulato/caracore-seed-releases" class="nav-card" target="_blank" rel="noopener">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                </span>
+                <h3>Repositório</h3>
+                <p>chmulato/caracore-seed-releases — vitrine e documentação. Aplicação não disponível para download.</p>
             </a>
         </div>
 
-        <section id="download-app" class="methodology" style="margin-top: 2rem;">
-            <div class="card" style="border-left: 4px solid var(--accent-amber);">
-                <h2>Adquirir o aplicativo (Windows)</h2>
-                <p>O <strong>CaraCore Seed</strong> é produto <strong>somente a pagamento</strong>: R$ 29,00 (valor único), PIX para Cara Core Informática (CNPJ). Após a compra, você acessa o instalador <strong>caracore-seed.exe</strong> e utiliza o contador de licenças 100% offline, com SQLite e Electron.</p>
-                <p style="margin-top: 12px;"><a href="compra.html" style="color: var(--accent-blue); font-weight: 500;">Ir para a página de compra →</a> · <a href="download.html" style="color: var(--accent-blue); font-weight: 500;">Download (após aquisição)</a></p>
-            </div>
-        </section>
-
         <footer>
             <p><a href="https://caracore.com.br/portfolio.html#caracore-seed">Cara Core Informática — Portfólio</a> · <a href="https://github.com/chmulato/caracore-seed-releases" target="_blank" rel="noopener">Repositório: chmulato/caracore-seed-releases</a></p>
-            <p>CaraCore Seed — R$ 29,00 (valor único). PIX CNPJ Cara Core. Produto final somente a pagamento. Contabilidade de clientes e licenças, 100% offline, Windows Desktop (Electron + SQLite).</p>
-            <p class="soberania">Loja filial com mesma cara e design do chmulato/ETE Minerador 4.0. Delivery centralizado pela Cara Core Informática.</p>
+            <p>CaraCore Seed — ferramenta interna. A aplicação não está disponível para download ou venda.</p>
         </footer>
     </div>
 </body>
