@@ -1,0 +1,6 @@
+# CaraCore Seed — loja (GitHub Pages a partir de /docs)
+title: CaraCore Seed
+baseurl: ""
+url: "https://chmulato.github.io/caracore-seed-releases"
+theme: null
+markdown: kramdown
