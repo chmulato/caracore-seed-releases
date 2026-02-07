@@ -9,52 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-dark: #1a1d21;
-            --bg-card: #252a30;
-            --text-primary: #e6edf3;
-            --text-secondary: #8b949e;
-            --accent-blue: #58a6ff;
-            --accent-gold: #d4a853;
-            --border: #373e47;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.65;
-            color: var(--text-primary);
-            background: var(--bg-dark);
-            min-height: 100vh;
-            padding: 0 20px 48px;
-        }
-        .wrapper { max-width: 560px; margin: 0 auto; }
-        .breadcrumb { font-size: 0.85rem; margin-bottom: 16px; padding-top: 16px; }
-        .breadcrumb a { color: var(--accent-blue); text-decoration: none; }
-        .breadcrumb a:hover { text-decoration: underline; }
-        .breadcrumb span { color: var(--text-secondary); }
-        header { padding: 48px 0 32px; border-bottom: 1px solid var(--border); }
-        header h1 { font-size: 1.6rem; color: var(--accent-gold); margin-bottom: 8px; }
-        header p { color: var(--text-secondary); font-size: 0.95rem; }
-        .card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 28px;
-            margin: 24px 0;
-            border-left: 4px solid var(--accent-gold);
-        }
-        .card p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 12px; }
-        .card p:last-child { margin-bottom: 0; }
-        .card a { color: var(--accent-blue); }
-        .back { margin-top: 24px; }
-        .back a { color: var(--text-secondary); text-decoration: none; }
-        .back a:hover { color: var(--accent-gold); }
-    </style>
+    <link rel="stylesheet" href="assets/css/seed-loja.css">
 </head>
-<body>
-    <div class="wrapper">
-        <nav class="breadcrumb" aria-label="Navegação">
+<body class="seed-loja-compra">
+    <div class="wrapper seed-compra">
+        <nav class="breadcrumb seed-mb16" aria-label="Navegação">
             <a href="https://caracore.com.br/portfolio.html#caracore-seed">Cara Core Informática</a>
             <span> · </span>
             <a href="index.html">CaraCore Seed</a>
@@ -63,16 +22,17 @@
         </nav>
 
         <header>
-            <h1>Comprar — CaraCore Seed</h1>
+            <h1 class="seed-gold-lg">Comprar — CaraCore Seed</h1>
             <p>A aplicação não está à venda.</p>
         </header>
 
-        <section class="card">
+        <section class="card seed-compra">
             <p>O <strong>CaraCore Seed</strong> é uma ferramenta de uso interno da Cara Core Informática. A aplicação <strong>não está disponível para compra</strong> nem para download.</p>
             <p>Para conhecer os produtos disponíveis, acesse o <a href="https://caracore.com.br/portfolio.html">portfólio da Cara Core</a>.</p>
         </section>
 
-        <p class="back"><a href="index.html">← Voltar ao portal</a></p>
+        <p class="back seed-mt24"><a href="index.html" class="seed-muted">← Voltar ao portal</a></p>
     </div>
+    <script src="assets/js/seed.js"></script>
 </body>
 </html>
