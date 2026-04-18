@@ -22,10 +22,11 @@ O desenvolvimento e o código-fonte ficam no repositório principal (**caracore-
 
 | Onde   | O que tem |
 |--------|-----------|
-| **Raiz** | README, LICENSE, VERSION, CHANGELOG, WORKSPACE.md; **index.html** e **download.html** (portal de delivery no estilo chmulatoETE Minerador 4.0). |
+| **Raiz** | README, LICENSE, VERSION, CHANGELOG, WORKSPACE.md. |
+| **docs/** | Portal da loja (**index.html**, **download.html**, wiki, páginas de apoio) publicado em **seed.caracore.com.br**. |
 | **Releases** | Artefato versionado **caracore-seed.exe** e checksums publicados em [Releases](https://github.com/chmulato/caracore-seed-releases/releases). |
 
-Os **clientes são direcionados a este repositório** para buscar o executável da entrega (caracore-seed.exe versionado). O portal (index + download) segue a mesma lógica de apresentação do Minerador 4.0: página inicial com apresentação do produto e navegação, e página de download com link para **Releases → Latest**.
+Os **clientes são direcionados à loja** (**seed.caracore.com.br**) ou ao repositório para buscar o executável da entrega (caracore-seed.exe versionado). O portal em **docs/** segue a mesma lógica de apresentação do Minerador 4.0: página inicial com apresentação do produto e navegação, e página de download com link para **Releases → Latest** quando aplicável.
 
 ---
 
@@ -34,7 +35,7 @@ Os **clientes são direcionados a este repositório** para buscar o executável 
 | Onde | Papel |
 |------|--------|
 | **Domínio Cara Core Informática** | Portal completo (fonte de verdade): `D:\dev\site\cara-core\delivery\seed` |
-| **Vitrine e balcão público** | Este repositório (raiz: index.html, download.html) — apresentação + link para Releases |
+| **Vitrine e balcão público** | Este repositório (**docs/**: index.html, download.html) e domínio **seed.caracore.com.br** — apresentação + link para Releases quando aplicável |
 
 O **delivery/seed** no site Cara Core é o portal completo (tecnologia, portal de controle, readme). Este repo (**caracore-seed-releases**) é a **vitrine** onde o cliente encontra a apresentação e o download do EXE versionado.
 
@@ -42,12 +43,13 @@ O **delivery/seed** no site Cara Core é o portal completo (tecnologia, portal d
 
 ## Links
 
-- **Portal de delivery (este repo):** [index.html](index.html) — apresentação; [download.html](download.html) — download do **caracore-seed.exe** (redireciona para [Releases → Latest](https://github.com/chmulato/caracore-seed-releases/releases/latest)).
+- **Loja oficial (domínio de atendimento):** [https://seed.caracore.com.br/](https://seed.caracore.com.br/) — portal publicado a partir de **docs/** (GitHub Pages com pasta `/docs` ou espelho no site da Cara Core).
+- **Portal neste repositório:** [docs/index.html](docs/index.html) — apresentação; [docs/download.html](docs/download.html) — download do **caracore-seed.exe** quando houver redirecionamento para [Releases → Latest](https://github.com/chmulato/caracore-seed-releases/releases/latest).
 - **Repositório público (delivery):** [github.com/chmulato/caracore-seed-releases](https://github.com/chmulato/caracore-seed-releases)
-- **Portfólio Cara Core Informática:** CaraCore Seed é o **quarto produto**; link no portfólio para este repositório.
+- **Documentação do produto na loja:** [docs/wiki/projeto-seed.html](docs/wiki/projeto-seed.html) — conteúdo de apoio no mesmo domínio da loja, sem links para portfólio ou wiki em outros hosts.
 - **Projeto principal (desenvolvimento):** Código-fonte e aplicação em repositório **caracore-seed** (privado ou público, conforme configuração).
 
-Para ativar o portal no GitHub Pages: em Settings → Pages, escolha *Deploy from a branch* e branch **main** (raiz). A raiz do repositório contém **index.html** e **download.html**; o arquivo **.nojekyll** evita processamento Jekyll. Se o portfólio Cara Core estiver em outro domínio/caminho, edite os links do breadcrumb em **index.html** e **download.html** (busque por `portfolio.html`).
+Para ativar o portal no GitHub Pages: em Settings → Pages, escolha *Deploy from a branch*, branch **main** e pasta **/docs**. O arquivo **docs/.nojekyll** evita processamento Jekyll. Links de navegação do portal apontam para **seed.caracore.com.br** e para caminhos relativos dentro de **docs/** (busque por `wiki/projeto-seed.html` se precisar ajustar o destino da documentação).
 
 ---
 
