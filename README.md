@@ -1,6 +1,6 @@
-# CaraCore Seed — Releases e delivery
+# CaraCore Seed — Loja (releases)
 
-Repositório público de **delivery** do **CaraCore Seed**: gestão de licenças do ecossistema Cara Core Informática (PDV, Minerador 4.0, Reino OIDC, Hub).
+Repositório público da **loja** do **CaraCore Seed**: gestão de licenças do ecossistema Cara Core Informática (PDV, Minerador 4.0, Reino OIDC, Hub).
 
 **Foco:** aplicativo **100% offline** no **Windows** (Desktop com Electron e SQLite). Controle local de licenças para o Contador de Clientes e para o comprador, sem dependência de servidor na nuvem.
 
@@ -30,14 +30,14 @@ Os **clientes são direcionados à loja** (**seed.caracore.com.br**) ou ao repos
 
 ---
 
-## Espelho de delivery (mesma lógica do Reino OIDC)
+## Espelho matriz ↔ loja
 
 | Onde | Papel |
 |------|--------|
-| **Domínio Cara Core Informática** | Portal completo (fonte de verdade): `D:\dev\site\cara-core\delivery\seed` |
-| **Vitrine e balcão público** | Este repositório (**docs/**: index.html, download.html) e domínio **seed.caracore.com.br** — apresentação + link para Releases quando aplicável |
+| **Matriz** | Resumo institucional: [portfolio.html#caracore-seed](https://www.caracore.com.br/portfolio.html#caracore-seed) · redirect legado `/delivery/seed/` |
+| **Vitrine** | Este repositório (**docs/**) em **seed.caracore.com.br** — apresentação informativa (aplicação não disponível para download) |
 
-O **delivery/seed** no site Cara Core é o portal completo (tecnologia, portal de controle, readme). Este repo (**caracore-seed-releases**) é a **vitrine** onde o cliente encontra a apresentação e o download do EXE versionado.
+A **loja** (**caracore-seed-releases**) é onde o público encontra a apresentação e a política do produto. O código-fonte fica em **caracore-seed** (oficina).
 
 ---
 
