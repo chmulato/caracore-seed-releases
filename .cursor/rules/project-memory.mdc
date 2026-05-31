@@ -1,0 +1,23 @@
+---
+description: Memória da loja Cara Core Seed — caracore-seed-releases; vitrine seed.caracore.com.br; app não pública
+alwaysApply: true
+---
+
+# Memória da Loja — caracore-seed-releases
+
+## Repositório e papel
+- **caracore-seed-releases:** loja (vitrine) do **Cara Core Seed**.
+- **URL:** https://seed.caracore.com.br/
+- **Publicação:** GitHub Pages a partir de **docs/**.
+- **Oficina:** caracore-seed (privado)
+
+## Matriz
+- **Portfólio:** `portfolio.html#caracore-seed`
+
+## Mensagem fixa
+- **Aplicação não disponível ao público** — vitrine explica papel interno (licenciamento Hub, PDV, ETE, OIDC).
+- Transparência comercial na narrativa: R$ 29,00, PIX, LGPD, offline (conforme copy da loja).
+
+## Convenções
+- Footer → portfólio `#caracore-seed`
+- Não prometer download público do EXE; releases via oficina quando aplicável.
