@@ -45,8 +45,8 @@ A **loja** (**caracore-seed-releases**) é onde o público encontra a apresenta�
 
 - **Loja oficial (domínio de atendimento):** [https://seed.caracore.com.br/](https://seed.caracore.com.br/) — portal publicado a partir de **docs/** (GitHub Pages com pasta `/docs` ou espelho no site da Cara Core).
 - **Portal neste repositório:** [docs/index.html](docs/index.html) — apresentação; [docs/download.html](docs/download.html) — download do **caracore-seed.exe** quando houver redirecionamento para [Releases → Latest](https://github.com/chmulato/caracore-seed-releases/releases/latest).
-- **Repositório público (delivery):** [github.com/chmulato/caracore-seed-releases](https://github.com/chmulato/caracore-seed-releases)
-- **Documentação do produto na loja:** [docs/wiki/projeto-seed.html](docs/wiki/projeto-seed.html) — conteúdo de apoio no mesmo domínio da loja, sem links para portfólio ou wiki em outros hosts.
+- **Repositório público (loja):** [github.com/chmulato/caracore-seed-releases](https://github.com/chmulato/caracore-seed-releases)
+- **Documentação do produto na loja:** [docs/wiki/projeto-seed.html](docs/wiki/projeto-seed.html) — conteúdo de apoio no mesmo domínio da loja; matriz em [portfolio.html#caracore-seed](https://www.caracore.com.br/portfolio.html#caracore-seed).
 - **Projeto principal (desenvolvimento):** Código-fonte e aplicação em repositório **caracore-seed** (privado ou público, conforme configuração).
 
 Para ativar o portal no GitHub Pages: em Settings → Pages, escolha *Deploy from a branch*, branch **main** e pasta **/docs**. O arquivo **docs/.nojekyll** evita processamento Jekyll. Links de navegação do portal apontam para **seed.caracore.com.br** e para caminhos relativos dentro de **docs/** (busque por `wiki/projeto-seed.html` se precisar ajustar o destino da documentação).
