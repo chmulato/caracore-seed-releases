@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://seed.caracore.com.br/">
-    <title>CaraCore Seed — Contador de licenças | Cara Core Informática</title>
-    <meta name="description" content="CaraCore Seed: ferramenta interna da Cara Core para gestão de licenças no ecossistema (PDV, Minerador 4.0, Reino OIDC, Hub). A aplicação não está disponível para download ou venda.">
+    <title>CaraCore Seed — piloto local | Cara Core Informática</title>
+    <meta name="description" content="CaraCore Seed: piloto local gratuito sob MIT, em homologação fechada para Windows x64. Sem download público; solicite convite.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,18 +25,22 @@
         </nav>
 
         <header>
-            <h1>CaraCore Seed</h1>
-            <p class="subtitle">Contador de licenças e gestão de clientes para o ecossistema Cara Core (PDV, Minerador 4.0, Reino OIDC, Hub). Ferramenta de uso interno da Cara Core Informática.</p>
+            <h1>CaraCore Seed — piloto local gratuito</h1>
+            <p class="subtitle">Gestão local de clientes e licenças sob MIT. Candidato Windows x64 em homologação fechada; participe por convite, sem download público.</p>
         </header>
 
         <section class="methodology">
             <div class="card">
-                <h2>O que é o CaraCore Seed?</h2>
-                <p>O <strong>CaraCore Seed</strong> é um aplicativo Windows Desktop (Electron + SQLite) que centraliza a contabilidade de clientes e licenças do ecossistema Cara Core. Funciona 100% offline e oferece portal de controle com transparência e LGPD. É uma ferramenta de <strong>utilidade interna</strong> da Cara Core — não é produto comercializado ao público.</p>
+                <h2>Gestão de licenças no seu computador</h2>
+                <p>O <strong>CaraCore Seed</strong> reúne cadastro de clientes, emissão e validação de licenças, validade, auditoria, alertas e registro local de heartbeats recebidos. O aplicativo roda localmente com SQLite e o servidor escuta somente em <code>127.0.0.1</code>; não oferece monitoramento remoto, conta na nuvem nem exige licença para usar o próprio Seed.</p>
             </div>
             <div class="card card-differential">
-                <h2>Aplicação não disponível</h2>
-                <p>A aplicação <strong>não está disponível para download nem à venda</strong>. Esta página apresenta o produto no contexto da loja. Para documentação e navegação, use as páginas deste site em <strong>seed.caracore.com.br</strong>.</p>
+                <h2>Piloto gratuito sob licença MIT</h2>
+                <p>Não há checkout nem cobrança. O candidato Windows x64 <strong>0.1.3</strong> passou nos testes automatizados, mas ainda aguarda homologação independente e teste em perfil limpo. Não há instalador público; o piloto será fechado por convite e os pacotes serão unsigned. Linux fica fora desta entrega. O repositório de código-fonte ainda não está publicamente acessível.</p>
+                <div class="links">
+                    <a href="download.html">Ver estado da distribuição</a>
+                    <a href="canal-feedback.html#convite">Solicitar convite</a>
+                </div>
             </div>
         </section>
 
@@ -68,7 +72,7 @@
                     </svg>
                 </span>
                 <h3>Cara Core Informática</h3>
-                <p>Informações institucionais e produto nesta loja (<strong>seed.caracore.com.br</strong>). Aplicação Seed não disponível para download.</p>
+                <p>Candidato Windows em homologação fechada; sem download público. Solicite convite.</p>
             </span>
             <span class="nav-card" style="cursor: default;">
                 <span class="icon" aria-hidden="true">
@@ -77,21 +81,19 @@
                     </svg>
                 </span>
                 <h3>Repositório</h3>
-                <p>chmulato/caracore-seed-releases — vitrine e documentação. Aplicação não disponível para download.</p>
+                <p>Vitrine, documentação e arquivos publicados do piloto.</p>
             </span>
         </div>
 
         <footer>
             <p><a href="index.html">CaraCore Seed — Loja</a> · <a href="https://wiki.caracore.com.br/projeto-seed.html">Documentação do produto</a> · <a href="https://www.caracore.com.br/portfolio.html#caracore-seed" rel="noopener">Portfólio Cara Core</a></p>
-            <p>CaraCore Seed — ferramenta interna. Aplicação não disponível para download ou venda. Conteúdo de apoio nesta loja: <strong>seed.caracore.com.br</strong></p>
+            <p>CaraCore Seed — piloto local gratuito sob MIT. O candidato Windows 0.1.3 aguarda homologação; sem download público. Quando disponibilizados, os instaladores serão unsigned.</p>
             <p class="footer-legal">Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/">www.caracore.com.br</a> · <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></p>
         </footer>
     </div>
     <script src="assets/js/seed.js"></script>
-    <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="Uso interno">Interno<span class="evo-beta-tooltip">Ferramenta de uso interno da Cara Core Informática — não comercializada.</span></span></div>
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Domínio próprio <span class="evo-roadmap-tag">Março/2026</span></li><li>Integração PIX nativa</li><li>IA para estoque</li></ul></footer>
+    <div class="evo-beta-wrap"><span class="evo-beta-badge" title="Piloto fechado em preparação">Piloto MIT</span></div>
+    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Estado do piloto</p><ul class="evo-roadmap-list"><li>Candidato Windows x64 0.1.3: testes automatizados aprovados; homologação independente e perfil limpo pendentes</li><li>Sem instalador público; participação por convite. Linux fica fora desta entrega</li><li>SQLite local; sem monitoramento remoto de heartbeats, checkout ou pagamento real</li></ul></footer>
     <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Canal de feedback da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
 </body>
 </html>
-
-
