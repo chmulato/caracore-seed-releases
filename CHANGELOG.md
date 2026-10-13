@@ -2,15 +2,16 @@
 
 Repositório público de **delivery** do CaraCore Seed. Alterações notáveis deste repositório e das releases do aplicativo desktop são documentadas aqui.
 
-**Foco:** piloto gratuito local sob MIT, com Electron, Java 25, Tomcat embutido e SQLite. Candidato Windows x64 0.1.3 em homologação independente, sem download público; Linux fica fora desta etapa. Sem checkout ou pagamento real.
+**Foco:** piloto público e gratuito local sob MIT, com Electron, Java 25, Tomcat embutido e SQLite. Candidato Windows x64 0.1.3 publicado para avaliação, sem convite ou cadastro prévio e ainda sem homologação independente; Linux fica fora desta etapa. Sem checkout ou pagamento real.
 
 ---
 
-## Candidato 0.1.3 — homologação independente pendente (2026-10-13)
+## Candidato 0.1.3 — publicado para avaliação (2026-10-13)
 
 - Suíte automatizada aprovada: Maven 914 testes; launcher 2/2; Electron 6/6; validação do pacote aprovada.
-- Candidato Windows x64 unsigned gerado localmente, mas ainda sem instalação/uso em perfil limpo e sem regressão manual completa.
-- Nenhum instalador foi enviado, publicado ou disponibilizado para download. Homologação será realizada por outra IA; aguardar aceite antes de distribuir.
+- Instalador Windows x64 unsigned publicado em `v0.1.3`: [release](https://github.com/chmulato/caracore-seed-releases/releases/tag/v0.1.3). SHA-256 `5adf48b1b8b14d79ff55fc7aecc1f38f7d4ee221848b68af3bae58e5a83626e8`.
+- Piloto público e aberto, no mesmo princípio de distribuição do PDV Rust; sem processo de convite. Isso não transfere limites, funcionalidades ou regras comerciais entre produtos.
+- Disponibilizado para avaliação antes da homologação independente; instalação/uso em perfil limpo e regressões manuais continuam pendentes. Não declarar homologado nem pronto para produção.
 - Primeiro acesso: `admin` / `admin`, troca obrigatória por senha de exatamente 8 caracteres com confirmação e chave de recuperação.
 - Seed opera localmente com SQLite e servidor em `127.0.0.1`; não oferece monitoramento remoto de heartbeats.
 - Linux permanece fora até build e smoke em runner Linux nativo. Não orientar a desativar proteções do Windows.
@@ -27,7 +28,7 @@ Repositório público de **delivery** do CaraCore Seed. Alterações notáveis d
 ### Estado
 
 - Não oferecer `0.1.0` para download nem inferir homologação a partir deste registro.
-- Consultar a memória atual da oficina e a seção do candidato `0.1.3` para o gate real de distribuição.
+- Consultar a seção do candidato `0.1.3`; release pública não equivale a homologação ou prontidão para produção.
 
 ---
 

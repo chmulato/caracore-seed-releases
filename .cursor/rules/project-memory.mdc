@@ -15,8 +15,8 @@ alwaysApply: true
 - **Portfólio:** `portfolio.html#caracore-seed`
 
 ## Mensagem vigente
-- Seed é um piloto local gratuito sob MIT; candidato Windows x64 `0.1.3` aguarda homologação independente e teste em perfil limpo.
-- Piloto fechado por convite; não há binário/checksum público, compra, checkout ou pagamento real. Não publicar/distribuir até aceite.
+- Seed é um piloto público local gratuito sob MIT, sem convite ou cadastro prévio; candidato Windows x64 `0.1.3` disponível para avaliação, ainda sem homologação independente e teste em perfil limpo. Segue o modelo de distribuição pública do PDV Rust, sem importar limites ou regras comerciais daquele produto.
+- Release pública `v0.1.3` para avaliação: instalador Windows x64 unsigned, SHA-256 `5adf48b1b8b14d79ff55fc7aecc1f38f7d4ee221848b68af3bae58e5a83626e8`. Ainda aguarda homologação independente e teste em perfil limpo; não declarar homologado/pronto para produção.
 - Linux fora desta entrega até build e smoke em runner Linux nativo.
 - Dados em SQLite local, servidor em `127.0.0.1`; não prometer monitoramento remoto de heartbeats.
 - Primeiro acesso `admin`/`admin`; troca obrigatória por senha de exatamente 8 caracteres com confirmação e chave de recuperação. Orientar recuperação pela chave; nunca apagar manualmente o arquivo de credenciais.
@@ -24,5 +24,5 @@ alwaysApply: true
 
 ## Convenções
 - Footer → portfólio `#caracore-seed`
-- O CTA de convite é uma manifestação de interesse, não garantia de participação nem link de download.
-- Não publicar hash, artefato ou link de release do `0.1.3` antes da homologação.
+- O download do piloto é aberto; o CTA de contato serve para feedback e não promete suporte individual.
+- A publicação do artefato foi autorizada antes do aceite de homologação; manter esse caveat visível em toda menção ao `0.1.3`.
