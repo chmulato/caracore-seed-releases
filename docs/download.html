@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://seed.caracore.com.br/">
     <title>Estado da distribuição — CaraCore Seed | Cara Core Informática</title>
-    <meta name="description" content="Baixe e instale o CaraCore Seed 0.1.3 no Windows 10/11 x64. Consulte requisitos, SHA-256, limitação da API, cópias de segurança e dados locais.">
+    <meta name="description" content="Baixe e instale o CaraCore Seed 0.1.4 no Windows 10/11 x64. Consulte requisitos, SHA-256, segurança da API, cópias de segurança e dados locais.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,18 +25,18 @@
 
         <header>
             <h1>Estado da distribuição — CaraCore Seed</h1>
-            <p>Versão 0.1.3 para avaliação no Windows 10/11 x64.</p>
+            <p>Versão 0.1.4 para avaliação no Windows 10/11 x64.</p>
         </header>
 
         <section class="card seed-download">
             <h2>Download</h2>
-            <p><a href="https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.3/caracore-seed-0.1.3-windows-x64.exe"><strong>Baixar CaraCore Seed 0.1.3 para Windows x64 (.EXE)</strong></a>.</p>
+            <p><a href="https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.4/caracore-seed-0.1.4-windows-x64.exe"><strong>Baixar CaraCore Seed 0.1.4 para Windows x64 (.EXE)</strong></a>.</p>
             <ul>
-                <li>Tamanho: 218.924.034 bytes (aprox. 219 MB).</li>
-                <li>SHA-256: <code>5adf48b1b8b14d79ff55fc7aecc1f38f7d4ee221848b68af3bae58e5a83626e8</code>.</li>
-                <li><a href="https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.3/SHA256SUMS.txt">Baixar SHA256SUMS.txt na release do GitHub</a>.</li>
+                <li>Tamanho: 216.458.520 bytes (aprox. 216 MB).</li>
+                <li>SHA-256: <code>a01da8dbad7fdee2e9e59b1a99ed1be45b3f2e1d007d559cf289c6a606a30c2a</code>.</li>
+                <li><a href="https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.4/SHA256SUMS.txt">Baixar SHA256SUMS.txt na release do GitHub</a>.</li>
             </ul>
-            <p>O binário e o texto da licença são MIT. O código-fonte não está publicado; não há data definida para sua publicação. Consulte a <a href="https://github.com/chmulato/caracore-seed-releases/blob/master/LICENSE">licença MIT</a>. A versão 1.0.0, publicada em fevereiro de 2026, pertence a uma linha anterior e não tem suporte; a versão atual para avaliação é a 0.1.3.</p>
+            <p>O binário e o texto da licença são MIT. O código-fonte não está publicado; não há data definida para sua publicação. Consulte a <a href="https://github.com/chmulato/caracore-seed-releases/blob/master/LICENSE">licença MIT</a>. A versão 1.0.0, publicada em fevereiro de 2026, pertence a uma linha anterior e não tem suporte; a versão atual para avaliação é a 0.1.4. A 0.1.3 foi substituída e não deve ser usada.</p>
         </section>
 
         <section class="card">
@@ -45,21 +45,22 @@
                 <li>Windows 10 ou Windows 11, 64 bits (x64).</li>
                 <li>Instalador de aproximadamente 219 MB; cerca de 400 MB de espaço após a instalação.</li>
                 <li>Java já vem incluído; não instale Java separadamente para usar o Seed.</li>
-                <li>A porta local 9080 precisa estar livre nesta versão.</li>
+                <li>O Seed escolhe uma porta local disponível ao iniciar; não é necessário reservar a porta 9080.</li>
                 <li>O requisito mínimo de memória RAM não foi confirmado para esta versão.</li>
             </ul>
         </section>
 
-        <section class="card" id="limitacoes">
-            <h2>Limitações conhecidas da versão 0.1.3</h2>
-            <p>O servidor do Seed escuta somente em <code>127.0.0.1</code>, portanto não expõe a API à rede local. Porém, <strong>qualquer programa executado no mesmo computador pode chamar a API <code>/api/v1</code> sem autenticação e criar ou revogar licenças</strong>. Use apenas para avaliação. A correção está prevista para a versão 0.1.4; este aviso deve ser removido quando essa versão for publicada.</p>
-            <p>A versão 0.1.3 ainda não foi homologada nem considerada pronta para produção. A instalação em computador novo e os testes manuais continuam pendentes. O instalador não tem assinatura digital; Linux não faz parte desta versão.</p>
+        <section class="card" id="seguranca">
+            <h2>Segurança e estado do piloto 0.1.4</h2>
+            <p>A API local agora exige autenticação: ações administrativas usam sessão ADMIN com proteção CSRF, e as rotas de integração de cada licença usam um token próprio. O servidor continua vinculado a <code>127.0.0.1</code>, escolhe uma porta local disponível ao iniciar e verifica a identidade do serviço.</p>
+            <p>A versão 0.1.3 tinha uma API sem autenticação e foi substituída. Use a 0.1.4, não a 0.1.3. Licenças antigas podem precisar de emissão ou rotação do token de API para usar as rotas protegidas; consulte a documentação da API dentro do aplicativo.</p>
+            <p>A 0.1.4 corrige problemas de segurança e robustez, mas continua sendo candidata para avaliação: homologação independente e regressões manuais completas ainda estão pendentes. Não a considere homologada nem pronta para produção. O instalador não tem assinatura digital; Linux não faz parte desta versão.</p>
         </section>
 
         <section class="card">
             <h2>Instalação e aviso do SmartScreen</h2>
             <ol>
-                <li>Baixe o instalador e confira se ele tem 218.924.034 bytes.</li>
+                <li>Baixe o instalador e confira se ele tem 216.458.520 bytes.</li>
                 <li>Calcule o SHA-256 do arquivo e compare com o valor publicado acima, antes de executá-lo.</li>
                 <li>Se o SmartScreen avisar que o aplicativo não é reconhecido, confira novamente tamanho e hash. Só então, se decidir prosseguir, escolha <strong>Mais informações</strong> e <strong>Executar assim mesmo</strong>.</li>
             </ol>
@@ -68,7 +69,7 @@
 
         <section class="card">
             <h2>Onde ficam seus dados</h2>
-            <p>O banco SQLite, as chaves e os registros do aplicativo ficam no perfil do usuário, sob <code>%APPDATA%\CaraCore Seed\</code>. Os nomes e subdiretórios exatos dependem do tipo de dado. O servidor local usa a porta 9080. Não compartilhe o banco nem arquivos de chave em pedidos de suporte.</p>
+            <p>O banco SQLite, as chaves e os registros do aplicativo ficam no perfil do usuário, sob <code>%APPDATA%\CaraCore Seed\</code>. A porta escolhida pelo servidor é registrada em <code>%APPDATA%\CaraCore Seed\server\server.port</code>. Não compartilhe o banco nem arquivos de chave em pedidos de suporte.</p>
         </section>
 
         <section class="card">
@@ -79,12 +80,12 @@
                 <li>Não apague nem substitua o banco SQLite ou as chaves. Perder <code>security/license-private.pem</code> impede a emissão de novas licenças que correspondam às assinaturas existentes.</li>
                 <li>Para recuperar os dados, use o recurso de restauração do próprio Seed com o arquivo <code>.seedbackup</code>. Faça um backup recente antes de testar a restauração.</li>
             </ul>
-            <p>A rotina de backup/restauração ainda não passou pelos testes manuais finais nesta versão; mantenha cópias independentes e não a considere validada para produção.</p>
+            <p>Faça backup antes de atualizar. Não desinstale removendo os dados: preserve o banco SQLite e as chaves de assinatura. A rotina de backup/restauração ainda não passou por todas as regressões manuais; mantenha cópias independentes.</p>
         </section>
 
         <section class="card">
             <h2>Como integrar</h2>
-            <p>O guia de <a href="integracao.html">integração da API e validação de licenças</a> descreve o uso local e a verificação da assinatura. A interface Swagger fica em <code>http://127.0.0.1:9080/swagger-ui</code> enquanto o Seed está em execução.</p>
+            <p>O guia de <a href="integracao.html">integração da API e validação de licenças</a> descreve o uso local e a verificação da assinatura. A porta atual é dinâmica; consulte <code>%APPDATA%\CaraCore Seed\server\server.port</code> e abra <code>http://127.0.0.1:&lt;porta&gt;/swagger-ui</code> enquanto o Seed está em execução.</p>
         </section>
 
         <section class="card">

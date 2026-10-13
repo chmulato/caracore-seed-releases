@@ -2,11 +2,26 @@
 
 Repositório público de **delivery** do CaraCore Seed. Alterações notáveis deste repositório e das releases do aplicativo desktop são documentadas aqui.
 
-**Foco:** piloto público e gratuito local sob MIT, com Electron, Java 25, Tomcat embutido e SQLite. Candidato Windows x64 0.1.3 publicado para avaliação, sem convite ou cadastro prévio e ainda sem homologação independente; Linux fica fora desta etapa. Sem checkout ou pagamento real.
+**Foco:** piloto público e gratuito local sob MIT, com Electron, Java 25, Tomcat embutido e SQLite. Candidato Windows x64 0.1.4 publicado para avaliação, sem convite ou cadastro prévio e ainda sem homologação independente; Linux fica fora desta etapa. Sem checkout ou pagamento real.
 
 ---
 
-## Candidato 0.1.3 — publicado para avaliação (2026-10-13)
+## Candidato 0.1.4 — publicado para avaliação (2026-10-13)
+
+- Instalador Windows x64 unsigned publicado em [`v0.1.4`](https://github.com/chmulato/caracore-seed-releases/releases/tag/v0.1.4): 216.458.520 bytes; SHA-256 `a01da8dbad7fdee2e9e59b1a99ed1be45b3f2e1d007d559cf289c6a606a30c2a`.
+- Corrige problemas de segurança e robustez. Operações administrativas exigem sessão ADMIN/CSRF; operações de licença usam token próprio. Porta local dinâmica e recursos web incluídos localmente.
+- Licenças antigas podem precisar de emissão ou rotação do token da API ao atualizar.
+- Homologação independente e regressões manuais completas ainda pendentes; não declarar homologado nem pronto para produção.
+- Fazer backup e preservar o banco SQLite e as chaves de assinatura durante a atualização. Linux fora desta entrega; não desativar proteções do Windows.
+
+## Histórico: candidato 0.1.3 — substituído (2026-10-13)
+
+- A versão 0.1.3 foi substituída pela 0.1.4. Sua API local não exigia autenticação; não use o instalador antigo.
+- Release arquivada: [v0.1.3](https://github.com/chmulato/caracore-seed-releases/releases/tag/v0.1.3). SHA-256 `5adf48b1b8b14d79ff55fc7aecc1f38f7d4ee221848b68af3bae58e5a83626e8`.
+
+---
+
+## Histórico: candidato 0.1.3 — publicado para avaliação (2026-10-13)
 
 - Suíte automatizada aprovada: Maven 914 testes; launcher 2/2; Electron 6/6; validação do pacote aprovada.
 - Instalador Windows x64 unsigned publicado em `v0.1.3`: [release](https://github.com/chmulato/caracore-seed-releases/releases/tag/v0.1.3). SHA-256 `5adf48b1b8b14d79ff55fc7aecc1f38f7d4ee221848b68af3bae58e5a83626e8`.
@@ -22,19 +37,19 @@ Repositório público de **delivery** do CaraCore Seed. Alterações notáveis d
 
 - A edição piloto é gratuita, sob MIT, e não exige ativação do próprio Seed.
 - O registro de `0.1.0` foi mantido como histórico; esta versão não é o candidato atual e não deve ser tratada como pacote disponível.
-- O candidato atual para avaliação é o `0.1.3` descrito acima. A senha inicial vigente é `admin` e a troca obrigatória pede senha de exatamente 8 caracteres, confirmação e chave de recuperação.
+- O candidato atual para avaliação é o `0.1.4` acima. A senha inicial vigente é `admin` e a troca obrigatória pede senha de 12 a 128 caracteres, confirmação e chave de recuperação.
 - Não há checkout nem processamento real de pagamentos; o gateway permanece simulado.
 
 ### Estado
 
 - Não oferecer `0.1.0` para download nem inferir homologação a partir deste registro.
-- Consultar a seção do candidato `0.1.3`; release pública não equivale a homologação ou prontidão para produção.
+- Consultar a seção atual do candidato `0.1.4`; release pública não equivale a homologação ou prontidão para produção.
 
 ---
 
 ## [1.0.0] — 2026-02-05
 
-> **Obsoleta, sem suporte:** esta versão pertence à linha anterior do projeto e não é o candidato atual para avaliação. Consulte a versão 0.1.3 acima.
+> **Obsoleta, sem suporte:** esta versão pertence à linha anterior do projeto e não é o candidato atual para avaliação. Consulte a versão 0.1.4 acima.
 
 ### Adicionado
 
