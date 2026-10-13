@@ -28,6 +28,7 @@ O **CaraCore Seed** é um piloto local para cadastrar clientes e administrar lic
 - **Downloads:** [página de download](https://seed.caracore.com.br/download.html)
 - **Releases desta loja:** [GitHub Releases](https://github.com/chmulato/caracore-seed-releases/releases)
 - **Matriz:** [portfolio.html#caracore-seed](https://www.caracore.com.br/portfolio.html#caracore-seed)
-- **Licença do código-fonte:** [LICENSE](LICENSE)
+- **Texto da licença MIT do binário:** [LICENSE](https://github.com/chmulato/caracore-seed-releases/blob/master/LICENSE)
+- **Estado do código-fonte:** não está publicado neste repositório; não há data definida para publicação.
 
 Este repositório mantém a vitrine e poderá receber artefatos somente após os gates de homologação. Não contém a oficina nem os binários públicos da aplicação neste momento.

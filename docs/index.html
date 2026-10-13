@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://seed.caracore.com.br/">
-    <title>CaraCore Seed — piloto local | Cara Core Informática</title>
-    <meta name="description" content="CaraCore Seed: piloto público local gratuito sob MIT para Windows x64. Versão 0.1.3 disponível para avaliação; homologação independente pendente.">
+    <title>CaraCore Seed — cadastro e licenciamento de software</title>
+    <meta name="description" content="Conheça o CaraCore Seed: ferramenta local para cadastrar clientes, emitir licenças de software e validar assinaturas. Piloto Windows 0.1.3.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,18 +25,34 @@
         </nav>
 
         <header>
-            <h1>CaraCore Seed — piloto local gratuito</h1>
-            <p class="subtitle">Gestão local de clientes e licenças sob MIT. Candidato Windows x64 0.1.3 disponível para avaliação; homologação independente pendente.</p>
+            <h1>CaraCore Seed</h1>
+            <p class="subtitle">Cadastre clientes, emita licenças assinadas e integre a validação ao seu próprio programa — tudo localmente.</p>
         </header>
 
         <section class="methodology">
             <div class="card">
-                <h2>Gestão de licenças no seu computador</h2>
-                <p>O <strong>CaraCore Seed</strong> reúne cadastro de clientes, emissão e validação de licenças, validade, auditoria, alertas e registro local de heartbeats recebidos. O aplicativo roda localmente com SQLite e o servidor escuta somente em <code>127.0.0.1</code>; não oferece monitoramento remoto, conta na nuvem nem exige licença para usar o próprio Seed.</p>
+                <h2>Como funciona</h2>
+                <ol class="steps">
+                    <li data-step="1"><strong>Cadastre o cliente</strong> e os dados da licença no painel do Seed.</li>
+                    <li data-step="2"><strong>Emita uma licença assinada</strong> para o seu produto e cliente.</li>
+                    <li data-step="3"><strong>Valide no seu programa</strong> a assinatura e as regras da licença; o programa também pode enviar um sinal periódico de uso (heartbeat) à API local.</li>
+                </ol>
+                <p>O Seed guarda os registros no SQLite do computador. O servidor local escuta em <code>127.0.0.1</code> e não oferece painel remoto.</p>
             </div>
             <div class="card card-differential">
-                <h2>Piloto gratuito sob licença MIT</h2>
-                <p>Não há checkout nem cobrança. O candidato Windows x64 <strong>0.1.3</strong> está disponível para avaliação, mas ainda aguarda homologação independente e teste em perfil limpo; não o considere homologado ou pronto para produção. O instalador é unsigned. Linux fica fora desta entrega. O repositório de código-fonte ainda não está publicamente acessível.</p>
+                <h2>Para quem é</h2>
+                <p>Desenvolvedores e pequenas software houses que precisam cadastrar clientes, emitir licenças para seus programas e validar essas licenças no próprio software.</p>
+                <p>O Seed inclui cadastro de clientes, emissão e administração de licenças, consulta de validade, auditoria e alertas. O próprio Seed é gratuito e não exige uma licença de uso.</p>
+                <div class="links">
+                    <a href="integracao.html">Guia de integração</a>
+                    <a href="https://wiki.caracore.com.br/projeto-seed.html">Documentação funcional</a>
+                </div>
+            </div>
+            <div class="card card-differential">
+                <h2>Estado do piloto — versão 0.1.3</h2>
+                <p>O instalador Windows x64 está publicado para avaliação. Ainda faltam testes finais em computador novo e regressões manuais; não considere esta versão homologada nem pronta para produção. O instalador não tem assinatura digital e Linux não faz parte desta versão.</p>
+                <p><strong>Limitação:</strong> qualquer programa no mesmo computador pode chamar a API local sem autenticação para criar ou revogar licenças. A correção está prevista para a versão 0.1.4; não use a 0.1.3 em produção. <a href="download.html#limitacoes">Leia os detalhes e limitações</a>.</p>
+                <p>O binário e o texto da licença são MIT. O código-fonte não está publicado; uma data para publicação ainda não foi definida. Não há checkout nem pagamento real.</p>
                 <div class="links">
                     <a href="https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.3/caracore-seed-0.1.3-windows-x64.exe">Baixar candidato Windows 0.1.3</a>
                     <a href="download.html">SHA-256 e estado da distribuição</a>
@@ -47,6 +63,25 @@
 
         <p class="nav-section-title">Links</p>
         <div class="nav-grid">
+            <a href="download.html" class="nav-card" title="Requisitos e download">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <path d="m7 10 5 5 5-5M12 15V3"/>
+                    </svg>
+                </span>
+                <h3>Download e requisitos</h3>
+                <p>Instalação, verificação do arquivo, dados locais e cópias de segurança.</p>
+            </a>
+            <a href="integracao.html" class="nav-card" title="Integração da API">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/>
+                    </svg>
+                </span>
+                <h3>Integração</h3>
+                <p>Verificação offline de assinatura, API local e sinal periódico do programa.</p>
+            </a>
             <a href="canal-feedback.html" class="nav-card" title="Suporte e feedback">
                 <span class="icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -64,37 +99,17 @@
                     </svg>
                 </span>
                 <h3>Wiki da aplicação</h3>
-                <p>Documentação funcional e técnica do Seed no próprio repositório de releases.</p>
+                <p>Informações funcionais e técnicas, incluindo o escopo do piloto.</p>
             </a>
-            <span class="nav-card" style="cursor: default;">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                    </svg>
-                </span>
-                <h3>Cara Core Informática</h3>
-                <p>Piloto público Windows 0.1.3 disponível para avaliação; homologação independente pendente.</p>
-            </span>
-            <span class="nav-card" style="cursor: default;">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                    </svg>
-                </span>
-                <h3>Repositório</h3>
-                <p>Vitrine, documentação e arquivos publicados do piloto.</p>
-            </span>
         </div>
 
         <footer>
-            <p><a href="index.html">CaraCore Seed — Loja</a> · <a href="https://wiki.caracore.com.br/projeto-seed.html">Documentação do produto</a> · <a href="https://www.caracore.com.br/portfolio.html#caracore-seed" rel="noopener">Portfólio Cara Core</a></p>
-            <p>CaraCore Seed — piloto local gratuito sob MIT. O candidato Windows 0.1.3 está disponível para avaliação, mas ainda não foi homologado. Instalador unsigned.</p>
+            <p><a href="https://github.com/chmulato/caracore-seed-releases/blob/master/LICENSE">Licença MIT</a> · <a href="privacidade.html">Privacidade</a> · <a href="https://wiki.caracore.com.br/projeto-seed.html">Documentação do produto</a> · <a href="https://www.caracore.com.br/portfolio.html#caracore-seed" rel="noopener">Portfólio Cara Core</a></p>
             <p class="footer-legal">Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/">www.caracore.com.br</a> · <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></p>
         </footer>
     </div>
     <script src="assets/js/seed.js"></script>
     <div class="evo-beta-wrap"><span class="evo-beta-badge" title="Piloto público para avaliação">Piloto MIT</span></div>
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Estado do piloto</p><ul class="evo-roadmap-list"><li>Candidato Windows x64 0.1.3 disponível para avaliação; homologação independente e perfil limpo pendentes</li><li>Download público disponível; instalador unsigned. Linux fica fora desta entrega</li><li>SQLite local; sem monitoramento remoto de heartbeats, checkout ou pagamento real</li></ul></footer>
     <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Canal de feedback da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
 </body>
 </html>

@@ -100,6 +100,9 @@ header p { font-size: 0.95rem; color: var(--text-secondary); }
 .card h2 { font-size: 1rem; font-weight: 600; color: var(--accent-gold); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
 .card p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 12px; line-height: 1.7; }
 .card p:last-child { margin-bottom: 0; }
+.card ul, .card ol { margin: 12px 0 16px 22px; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; }
+.card li { margin-bottom: 6px; }
+.card pre { overflow-x: auto; padding: 14px; margin: 12px 0; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-size: 0.82rem; white-space: pre-wrap; }
 .card a { color: var(--accent-blue); text-decoration: none; }
 .card a.card-link-cyan { color: var(--accent-cyan); }
 .card a:hover { text-decoration: underline; }

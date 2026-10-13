@@ -34,6 +34,8 @@ Repositório público de **delivery** do CaraCore Seed. Alterações notáveis d
 
 ## [1.0.0] — 2026-02-05
 
+> **Obsoleta, sem suporte:** esta versão pertence à linha anterior do projeto e não é o candidato atual para avaliação. Consulte a versão 0.1.3 acima.
+
 ### Adicionado
 
 - Estrutura inicial do repositório público **[caracore-seed-releases](https://github.com/chmulato/caracore-seed-releases)**.

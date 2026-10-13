@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://seed.caracore.com.br/">
+    <title>Integração — CaraCore Seed</title>
+    <meta name="description" content="Visão geral da integração com a API local do CaraCore Seed e exemplos de verificação offline de assinatura RSA.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/seed-loja.css">
+    <link rel="stylesheet" href="/assets/caracore-core-typography.css">
+    <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+</head>
+<body class="seed-loja-narrow">
+    <main class="wrapper seed-narrow">
+        <nav class="breadcrumb seed-mb16" aria-label="Navegação">
+            <a href="index.html">CaraCore Seed — Loja</a>
+            <span> · </span>
+            <span>Integração</span>
+        </nav>
+
+        <header class="seed-header-sm">
+            <h1>Integração com o CaraCore Seed</h1>
+            <p>Visão geral para desenvolvedores que integram a validação de licenças aos próprios programas.</p>
+        </header>
+
+        <section class="card">
+            <h2>Antes de integrar: limite importante da versão 0.1.3</h2>
+            <p>O servidor atende apenas em <code>127.0.0.1</code>, mas a API local <code>/api/v1</code> não exige autenticação. Qualquer programa executado no mesmo computador pode criar ou revogar licenças. Essa limitação está prevista para correção na versão 0.1.4. Não use a versão 0.1.3 em produção.</p>
+        </section>
+
+        <section class="card">
+            <h2>Onde consultar a API</h2>
+            <p>Com o Seed em execução no computador, abra <a href="http://127.0.0.1:9080/swagger-ui">Swagger UI local</a>. A API usa a porta 9080 nesta versão. O servidor não é exposto à rede local.</p>
+            <p>Use o Swagger local como referência para as rotas, parâmetros e respostas disponíveis na versão instalada. A documentação pública disponível para 0.1.3 não especifica os códigos de erro nem o contrato completo dos endpoints; não presuma nomes de campos ou códigos fora do que o Swagger apresenta.</p>
+        </section>
+
+        <section class="card">
+            <h2>Verifique a assinatura offline</h2>
+            <p>A assinatura da licença usa <code>SHA256withRSA</code>. A chave pública está em <code>security/license-public.pem</code>. O programa cliente pode verificar a assinatura sem consultar a API ou a internet, desde que tenha os bytes exatos assinados e a assinatura codificada em Base64.</p>
+            <p><strong>Importante:</strong> a documentação pública da versão 0.1.3 não define o esquema JSON da licença nem a serialização/canonicalização assinada. O exemplo abaixo mostra a operação criptográfica, não o formato da licença: obtenha do payload e da resposta de validação no Swagger os campos reais e preserve exatamente os bytes assinados. Não reserialize o JSON antes de verificar.</p>
+            <h3>Java</h3>
+            <pre><code>import java.nio.file.Files;
+import java.nio.file.Path;
+import java.security.KeyFactory;
+import java.security.PublicKey;
+import java.security.Signature;
+import java.security.spec.X509EncodedKeySpec;
+import java.util.Base64;
+
+byte[] payloadBytes = obterBytesExatosDoPayloadAssinado();
+byte[] assinatura = Base64.getDecoder().decode(assinaturaBase64);
+
+String pem = Files.readString(Path.of("security/license-public.pem"));
+String base64Key = pem
+    .replace("-----BEGIN PUBLIC KEY-----", "")
+    .replace("-----END PUBLIC KEY-----", "")
+    .replaceAll("\\s", "");
+byte[] keyBytes = Base64.getDecoder().decode(base64Key);
+PublicKey chave = KeyFactory.getInstance("RSA")
+    .generatePublic(new X509EncodedKeySpec(keyBytes));
+
+Signature verifier = Signature.getInstance("SHA256withRSA");
+verifier.initVerify(chave);
+verifier.update(payloadBytes);
+boolean assinaturaValida = verifier.verify(assinatura);</code></pre>
+            <h3>Python (pacote <code>cryptography</code>)</h3>
+            <pre><code>from base64 import b64decode
+from pathlib import Path
+from cryptography.hazmat.primitives import hashes, serialization
+from cryptography.hazmat.primitives.asymmetric import padding
+
+payload_bytes = obter_bytes_exatos_do_payload_assinado()
+assinatura = b64decode(assinatura_base64, validate=True)
+chave = serialization.load_pem_public_key(
+    Path("security/license-public.pem").read_bytes()
+)
+
+chave.verify(
+    assinatura,
+    payload_bytes,
+    padding.PKCS1v15(),
+    hashes.SHA256(),
+)
+# Se verify() terminar sem InvalidSignature, a assinatura confere.</code></pre>
+            <p>Uma assinatura válida confirma que os bytes foram assinados com a chave privada correspondente. O cliente também deve verificar validade, produto, cliente e limites conforme os campos definidos pelo Seed e pelas regras do seu próprio programa. Proteja a chave privada: perder <code>security/license-private.pem</code> impede emitir novas licenças compatíveis.</p>
+        </section>
+
+        <section class="card">
+            <h2>Sinal periódico (heartbeat)</h2>
+            <p>O programa licenciado pode enviar um sinal periódico de uso à API local. Os campos conhecidos incluem <code>usuariosAtivos</code> (quantidade de usuários ativos), <code>status</code> (estado do programa) e <code>timestamp</code> (data e hora do registro). Confira no Swagger da instalação o endpoint, os tipos, os valores aceitos e eventuais campos obrigatórios.</p>
+            <pre><code>{
+  "usuariosAtivos": 12,
+  "status": "&lt;estado aceito pela API&gt;",
+  "timestamp": "&lt;data e hora aceitas pela API&gt;"
+}</code></pre>
+            <p>Os registros são locais; a versão 0.1.3 não oferece monitoramento remoto de heartbeats.</p>
+        </section>
+
+        <nav class="back">
+            <a href="index.html">← Voltar ao portal</a> ·
+            <a href="download.html">Download e limitações</a> ·
+            <a href="canal-feedback.html">Canal de feedback</a>
+        </nav>
+    </main>
+    <script src="assets/js/seed.js"></script>
+    <div class="evo-beta-wrap"><span class="evo-beta-badge" title="Piloto público para avaliação">Piloto MIT</span></div>
+    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Canal de feedback da loja">Sugira uma melhoria</a></div>
+</body>
+</html>
