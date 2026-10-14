@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://seed.caracore.com.br/">
     <title>CaraCore Seed — cadastro e licenciamento de software</title>
-    <meta name="description" content="Conheça o CaraCore Seed: ferramenta local para cadastrar clientes, emitir licenças de software e validar assinaturas. Piloto Windows 0.1.4.">
+    <meta name="description" content="Conheça o CaraCore Seed: ferramenta local para cadastrar clientes, emitir licenças de software e validar assinaturas. Pré-release candidata Windows 0.1.5.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -20,6 +20,8 @@
             <a href="https://www.caracore.com.br/">Cara Core Informática</a>
             <span> · </span>
             <a href="https://www.caracore.com.br/portfolio.html#caracore-seed" rel="noopener">Portfólio</a>
+            <span> · </span>
+            <a href="https://download.caracore.com.br/">Ecossistema e downloads</a>
             <span> · </span>
             <span>CaraCore Seed — Loja</span>
         </nav>
@@ -38,6 +40,7 @@
                     <li data-step="3"><strong>Valide no seu programa</strong> a assinatura e as regras da licença; o programa também pode enviar um sinal periódico de uso (heartbeat) à API local.</li>
                 </ol>
                 <p>O Seed guarda os registros no SQLite do computador. O servidor local escuta em <code>127.0.0.1</code> e não oferece painel remoto.</p>
+                <p>No ecossistema Cara Core, o Seed é uma ferramenta complementar de gestão local de clientes e licenças. Cada produto continua com seu próprio aplicativo, acesso e banco; o Seed não centraliza dados dos demais produtos.</p>
             </div>
             <div class="card card-differential">
                 <h2>Para quem é</h2>
@@ -49,13 +52,15 @@
                 </div>
             </div>
             <div class="card card-differential">
-                <h2>Estado do piloto — versão 0.1.4</h2>
-                <p>O instalador Windows x64 está publicado para avaliação. Esta versão corrige problemas de segurança e robustez, incluindo autenticação na API local. Ainda faltam homologação independente e regressões manuais completas; não considere o piloto pronto para produção. O instalador não tem assinatura digital e Linux não faz parte desta versão.</p>
+                <h2>Pré-release candidata — versão 0.1.5</h2>
+                <p>O instalador Windows x64 está publicado para avaliação como pré-release. Esta atualização corrige problemas de segurança e robustez: valida Host em todas as rotas, renova o token CSRF após login e troca de senha, e distingue licenças revogadas/expiradas quando o token é válido. Ainda falta homologação independente; não considere o piloto pronto para produção. O instalador não tem assinatura digital e Linux não faz parte desta versão.</p>
+                <p>Heartbeats usam a hora UTC do servidor, preservando a hora do cliente para diagnóstico. A migração SQLite V8 mantém bancos 0.1.3/0.1.4 e as chaves existentes; respostas documentam o payload RSA exato. O Swagger UI carrega documentação local, sem CDN ou validador externo.</p>
                 <p>A API administrativa exige sessão e proteção CSRF; as rotas de integração usam token por licença. O servidor verifica sua identidade e escolhe uma porta local disponível. Licenças antigas podem precisar de emissão ou rotação do token para usar as rotas protegidas.</p>
                 <p>O binário e o texto da licença são MIT. O código-fonte não está publicado; uma data para publicação ainda não foi definida. Não há checkout nem pagamento real.</p>
                 <div class="links">
-                    <a href="https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.4/caracore-seed-0.1.4-windows-x64.exe">Baixar candidato Windows 0.1.4</a>
+                    <a href="https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.5/caracore-seed-0.1.5-windows-x64.exe">Baixar pré-release candidata Windows 0.1.5</a>
                     <a href="download.html">SHA-256 e estado da distribuição</a>
+                    <a href="https://download.caracore.com.br/">Central de downloads Cara Core</a>
                     <a href="canal-feedback.html">Feedback do piloto</a>
                 </div>
             </div>

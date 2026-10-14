@@ -5,14 +5,14 @@ O **CaraCore Seed** é um piloto local para cadastrar clientes e administrar lic
 ## Estado da distribuição
 
 - O portal apresenta o produto e suas instruções.
-- O candidato Windows x64 `0.1.4` está publicado na release para avaliação. A homologação independente e regressões manuais completas estão pendentes; não o declare homologado nem pronto para produção.
-- A versão `0.1.4` corrige problemas de segurança/robustez: operações administrativas usam sessão ADMIN/CSRF, as operações de licença usam token próprio, e a porta local é dinâmica. A versão `0.1.3` foi substituída.
+- A pré-release candidata Windows x64 `0.1.5` está publicada para avaliação. A homologação independente continua pendente; não a declare homologada nem pronta para produção. A release estável anterior é a `0.1.4`.
+- A versão `0.1.5` corrige problemas de segurança e robustez: valida `Host` em todas as rotas, renova o token CSRF após autenticação, registra heartbeat no horário UTC do servidor, diferencia licenças revogadas/expiradas, documenta o payload RSA e migra SQLite preservando bancos 0.1.3/0.1.4. A documentação embarcada funciona sem CDN ou validador remoto.
 - O piloto é aberto, sem convite ou cadastro prévio; esse modelo de distribuição segue a ideia do piloto público do PDV Rust, sem importar limites ou regras comerciais daquele produto.
 - Linux fica fora desta entrega até build e smoke em runner Linux nativo.
 - Os instaladores desta fase serão unsigned; nunca orientar a desativar SmartScreen, Defender ou outras proteções.
 - O código-fonte está licenciado sob MIT no repositório de desenvolvimento, mas esse repositório ainda não teve sua disponibilidade pública confirmada. Não trate o piloto como publicamente acessível ao código até essa publicação.
 - O Seed é local: SQLite no perfil do usuário, servidor em `127.0.0.1`, sem monitoramento remoto de heartbeats e sem checkout/pagamento real.
-- Release `v0.1.4`: [baixar instalador Windows x64](https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.4/caracore-seed-0.1.4-windows-x64.exe). 216.458.520 bytes; SHA-256: `a01da8dbad7fdee2e9e59b1a99ed1be45b3f2e1d007d559cf289c6a606a30c2a`. Instalador unsigned; nunca desative as proteções do Windows.
+- Pré-release `v0.1.5`: [baixar instalador Windows x64](https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.5/caracore-seed-0.1.5-windows-x64.exe). 216.466.586 bytes; SHA-256: `e449ca2cee74fda135ac098d2333fe674c2c476773a7d4adb60bc016a767db16`. Instalador unsigned; nunca desative as proteções do Windows.
 
 ## O aplicativo
 
@@ -28,6 +28,7 @@ O **CaraCore Seed** é um piloto local para cadastrar clientes e administrar lic
 - **Downloads:** [página de download](https://seed.caracore.com.br/download.html)
 - **Releases desta loja:** [GitHub Releases](https://github.com/chmulato/caracore-seed-releases/releases)
 - **Matriz:** [portfolio.html#caracore-seed](https://www.caracore.com.br/portfolio.html#caracore-seed)
+- **Ecossistema e catálogo central:** [download.caracore.com.br](https://download.caracore.com.br/) — o Seed é a ferramenta local de gestão de clientes e licenças no portfólio Cara Core; cada produto mantém seu próprio aplicativo e banco.
 - **Texto da licença MIT do binário:** [LICENSE](https://github.com/chmulato/caracore-seed-releases/blob/master/LICENSE)
 - **Estado do código-fonte:** não está publicado neste repositório; não há data definida para publicação.
 

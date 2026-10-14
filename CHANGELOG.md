@@ -2,9 +2,20 @@
 
 Repositório público de **delivery** do CaraCore Seed. Alterações notáveis deste repositório e das releases do aplicativo desktop são documentadas aqui.
 
-**Foco:** piloto público e gratuito local sob MIT, com Electron, Java 25, Tomcat embutido e SQLite. Candidato Windows x64 0.1.4 publicado para avaliação, sem convite ou cadastro prévio e ainda sem homologação independente; Linux fica fora desta etapa. Sem checkout ou pagamento real.
+**Foco:** piloto público e gratuito local sob MIT, com Electron, Java 25, Tomcat embutido e SQLite. Pré-release candidata Windows x64 0.1.5 publicada para avaliação, sem convite ou cadastro prévio e ainda sem homologação independente; Linux fica fora desta etapa. Sem checkout ou pagamento real.
 
 ---
+
+## Pré-release candidata 0.1.5 — publicada para avaliação (2026-10-13)
+
+- Instalador Windows x64 unsigned publicado em [`v0.1.5`](https://github.com/chmulato/caracore-seed-releases/releases/tag/v0.1.5): 216.466.586 bytes; SHA-256 `e449ca2cee74fda135ac098d2333fe674c2c476773a7d4adb60bc016a767db16`.
+- Registra heartbeat com horário UTC do servidor e mantém o horário do cliente para diagnóstico; diferencia relógios desviados em mais de cinco minutos.
+- Token válido de licença revogada/expirada retorna o status da licença; token ausente/inválido continua recusado.
+- Validação de Host cobre todas as rotas; token CSRF é renovado após login e troca de senha.
+- Respostas expõem `signedPayload` e `SHA256withRSA`, preservando o formato assinado anterior. Documentação e Swagger UI usam especificação local, sem CDN nem validador remoto.
+- Migração SQLite V8 aditiva mantém compatibilidade com bancos 0.1.3/0.1.4 e preserva dados e chaves.
+- A suíte Java passou (931 testes), assim como launcher (2) e Electron (6; um teste legado ignorado). Homologação independente e regressões manuais continuam pendentes; não declarar pronto para produção.
+- A 0.1.4 permanece como release estável anterior. Fazer backup e preservar o banco SQLite e as chaves de assinatura ao atualizar. Linux fora desta entrega; não desativar proteções do Windows.
 
 ## Candidato 0.1.4 — publicado para avaliação (2026-10-13)
 

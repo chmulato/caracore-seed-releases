@@ -1,1 +1,1 @@
-a01da8dbad7fdee2e9e59b1a99ed1be45b3f2e1d007d559cf289c6a606a30c2a  caracore-seed-0.1.4-windows-x64.exe
+e449ca2cee74fda135ac098d2333fe674c2c476773a7d4adb60bc016a767db16  caracore-seed-0.1.5-windows-x64.exe

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://seed.caracore.com.br/">
     <title>Estado da distribuição — CaraCore Seed | Cara Core Informática</title>
-    <meta name="description" content="Baixe e instale o CaraCore Seed 0.1.4 no Windows 10/11 x64. Consulte requisitos, SHA-256, segurança da API, cópias de segurança e dados locais.">
+    <meta name="description" content="Baixe e instale a pré-release candidata CaraCore Seed 0.1.5 no Windows 10/11 x64. Consulte requisitos, SHA-256, segurança da API, cópias de segurança e dados locais.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,18 +25,18 @@
 
         <header>
             <h1>Estado da distribuição — CaraCore Seed</h1>
-            <p>Versão 0.1.4 para avaliação no Windows 10/11 x64.</p>
+            <p>Pré-release candidata 0.1.5 para avaliação no Windows 10/11 x64; a release 0.1.4 permanece como versão estável anterior.</p>
         </header>
 
         <section class="card seed-download">
             <h2>Download</h2>
-            <p><a href="https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.4/caracore-seed-0.1.4-windows-x64.exe"><strong>Baixar CaraCore Seed 0.1.4 para Windows x64 (.EXE)</strong></a>.</p>
+            <p><a href="https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.5/caracore-seed-0.1.5-windows-x64.exe"><strong>Baixar CaraCore Seed 0.1.5 para Windows x64 (.EXE)</strong></a>.</p>
             <ul>
-                <li>Tamanho: 216.458.520 bytes (aprox. 216 MB).</li>
-                <li>SHA-256: <code>a01da8dbad7fdee2e9e59b1a99ed1be45b3f2e1d007d559cf289c6a606a30c2a</code>.</li>
-                <li><a href="https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.4/SHA256SUMS.txt">Baixar SHA256SUMS.txt na release do GitHub</a>.</li>
+                <li>Tamanho: 216.466.586 bytes (aprox. 216 MB).</li>
+                <li>SHA-256: <code>e449ca2cee74fda135ac098d2333fe674c2c476773a7d4adb60bc016a767db16</code>.</li>
+                <li><a href="https://github.com/chmulato/caracore-seed-releases/releases/download/v0.1.5/SHA256SUMS.txt">Baixar SHA256SUMS.txt na release do GitHub</a>.</li>
             </ul>
-            <p>O binário e o texto da licença são MIT. O código-fonte não está publicado; não há data definida para sua publicação. Consulte a <a href="https://github.com/chmulato/caracore-seed-releases/blob/master/LICENSE">licença MIT</a>. A versão 1.0.0, publicada em fevereiro de 2026, pertence a uma linha anterior e não tem suporte; a versão atual para avaliação é a 0.1.4. A 0.1.3 foi substituída e não deve ser usada.</p>
+            <p>O binário e o texto da licença são MIT. O código-fonte não está publicado; não há data definida para sua publicação. Consulte a <a href="https://github.com/chmulato/caracore-seed-releases/blob/master/LICENSE">licença MIT</a>. A versão 1.0.0, publicada em fevereiro de 2026, pertence a uma linha anterior e não tem suporte; a pré-release candidata atual para avaliação é a 0.1.5, e a 0.1.4 permanece como release estável anterior. A 0.1.3 foi substituída e não deve ser usada. O Seed integra o portfólio local-first da Cara Core como ferramenta de gestão de clientes e licenças; cada produto mantém seus próprios dados e instalação. Veja a <a href="https://download.caracore.com.br/">Central de Downloads Cara Core</a>.</p>
         </section>
 
         <section class="card">
@@ -51,16 +51,16 @@
         </section>
 
         <section class="card" id="seguranca">
-            <h2>Segurança e estado do piloto 0.1.4</h2>
-            <p>A API local agora exige autenticação: ações administrativas usam sessão ADMIN com proteção CSRF, e as rotas de integração de cada licença usam um token próprio. O servidor continua vinculado a <code>127.0.0.1</code>, escolhe uma porta local disponível ao iniciar e verifica a identidade do serviço.</p>
-            <p>A versão 0.1.3 tinha uma API sem autenticação e foi substituída. Use a 0.1.4, não a 0.1.3. Licenças antigas podem precisar de emissão ou rotação do token de API para usar as rotas protegidas; consulte a documentação da API dentro do aplicativo.</p>
-            <p>A 0.1.4 corrige problemas de segurança e robustez, mas continua sendo candidata para avaliação: homologação independente e regressões manuais completas ainda estão pendentes. Não a considere homologada nem pronta para produção. O instalador não tem assinatura digital; Linux não faz parte desta versão.</p>
+            <h2>Segurança e estado da pré-release candidata 0.1.5</h2>
+            <p>A API local exige autenticação: ações administrativas usam sessão ADMIN com proteção CSRF, e as rotas de integração de cada licença usam um token próprio. O Host é validado em todas as rotas; o token CSRF muda após login e troca de senha. O servidor continua vinculado a <code>127.0.0.1</code>, escolhe uma porta local disponível e verifica sua identidade.</p>
+            <p>A versão 0.1.5 registra heartbeats no horário UTC do servidor e marca desvios do relógio do cliente; um token válido para licença revogada/expirada recebe o respectivo status. O banco da 0.1.3 e 0.1.4 é migrado com Flyway V8 aditiva, preservando dados, chaves RSA e assinaturas. O Swagger UI usa documentação servida localmente, sem CDN nem validação remota.</p>
+            <p>A versão 0.1.3 tinha uma API sem autenticação e foi substituída; a 0.1.4 é a release estável anterior. A 0.1.5 continua sendo pré-release candidata para avaliação: homologação independente ainda está pendente. Não a considere homologada nem pronta para produção. O instalador não tem assinatura digital; Linux não faz parte desta versão.</p>
         </section>
 
         <section class="card">
             <h2>Instalação e aviso do SmartScreen</h2>
             <ol>
-                <li>Baixe o instalador e confira se ele tem 216.458.520 bytes.</li>
+                <li>Baixe o instalador e confira se ele tem 216.466.586 bytes.</li>
                 <li>Calcule o SHA-256 do arquivo e compare com o valor publicado acima, antes de executá-lo.</li>
                 <li>Se o SmartScreen avisar que o aplicativo não é reconhecido, confira novamente tamanho e hash. Só então, se decidir prosseguir, escolha <strong>Mais informações</strong> e <strong>Executar assim mesmo</strong>.</li>
             </ol>
